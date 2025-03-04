@@ -1,0 +1,246 @@
+.task-board {
+    padding: 24px;
+    height: calc(100vh - 120px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.board-header {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add-task-btn {
+    background: linear-gradient(135deg, #0052cc 0%, #0747a6 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,82,204,0.2);
+}
+
+.board-columns {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+    height: 100%;
+}
+
+.board-column {
+    background: #f4f5f7;
+    border-radius: 12px;
+    min-width: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+
+.column-header {
+    padding: 16px;
+    margin: 0;
+    color: #172b4d;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.task-count {
+    background: rgba(0,82,204,0.1);
+    color: #0052cc;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.task-list {
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    cursor: grab;
+    user-select: none;
+}
+
+.task-card.dragging {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    background: #fafbfc;
+}
+
+.task-card h4 {
+    margin: 0 0 8px 0;
+    color: #172b4d;
+    font-size: 14px;
+}
+
+.task-card p {
+    margin: 0 0 12px 0;
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.task-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #e9ecef;
+}
+
+.task-date {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.delete-task-btn {
+    background: none;
+    border: none;
+    color: #ff4d4f;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.delete-task-btn:hover {
+    background: rgba(255,77,79,0.1);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.add-task-modal {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.add-task-modal h2 {
+    margin: 0 0 24px 0;
+    color: #172b4d;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #172b4d;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+.submit-btn,
+.cancel-btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #0052cc 0%, #0747a6 100%);
+    color: white;
+    border: none;
+}
+
+.cancel-btn {
+    background: none;
+    border: 2px solid #e9ecef;
+    color: #6b7280;
+}
+
+.message {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.message.success {
+    background: #f6ffed;
+    border: 1px solid #b7eb8f;
+    color: #52c41a;
+}
+
+.message.error {
+    background: #fff2f0;
+    border: 1px solid #ffccc7;
+    color: #ff4d4f;
+}
+
+/* تحسينات للتجاوب */
+@media (max-width: 768px) {
+    .board-columns {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .board-column {
+        width: 100%;
+        min-width: 100%;
+    }
+} 

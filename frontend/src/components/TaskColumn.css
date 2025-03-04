@@ -1,0 +1,41 @@
+.task-column {
+  min-width: 300px;
+  background: #ebecf0;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 0 10px;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.column-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #172b4d;
+  margin: 0;
+}
+
+.column-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #5e6c84;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.column-header button:hover {
+  background: rgba(9, 30, 66, 0.08);
+}
+
+.tasks-container {
+  min-height: 100px;
+  padding: 5px;
+} 

@@ -1,0 +1,13 @@
+.task-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-list p {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    margin: 20px 0;
+} 

@@ -1,0 +1,69 @@
+.task-card {
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(9,30,66,.25);
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.task-card:hover {
+  background: #f4f5f7;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.task-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.task-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.task-actions button {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 3px;
+  background: #ebecf0;
+  color: #172b4d;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.assigned-to {
+  display: flex;
+  gap: 4px;
+}
+
+.user-avatar {
+  width: 24px;
+  height: 24px;
+  background: #0052cc;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.due-date {
+  font-size: 12px;
+  color: #5e6c84;
+} 
